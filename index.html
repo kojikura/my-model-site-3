@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>3D Viewer</title>
-    <!-- model-viewer 本体 -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <style>
       html, body {
@@ -16,34 +15,14 @@
         width: 100vw;
         height: 100vh;
         background: #fff;
-      }
-      .tips {
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: rgba(0,0,0,0.6);
-        color: #fff;
-        padding: 6px 12px;
-        border-radius: 8px;
-        font-size: 0.9rem;
+        display: block;
       }
     </style>
   </head>
   <body>
-    <model-viewer src="33-gltf-wolf/gltf/Wolf-Blender-2.82a.gltf" 
-      camera-controls tone-mapping="neutral" 
+    <model-viewer src="33-gltf-wolf/gltf/Wolf-Blender-2.82a.gltf"
+      camera-controls tone-mapping="neutral"
       shadow-intensity="1" autoplay>
-      
-      <div class="progress-bar hide" slot="progress-bar">
-        <div class="update-bar"></div>
-      </div>
-      <button slot="ar-button" id="ar-button">View in your space</button>
-      <div id="ar-prompt">
-        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-      </div>
     </model-viewer>
-
-    <p class="tips">操作：ドラッグ＝回転｜ピンチ＝ズーム｜2本指ドラッグ＝平行移動</p>
   </body>
 </html>
